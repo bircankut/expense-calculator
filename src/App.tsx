@@ -1,11 +1,11 @@
 import './App.css'
+import { Header } from '../src/components/header/header'
 
 function App() {
   return (
     <div className='main'>
-      Expence Calculator
+      <Header/>
       </div>
   )
 }
-
 export default App
