@@ -1,4 +1,16 @@
 .headerBox {
-    height: 27vh;
-    background-color: antiquewhite;
+    height: 20vh;
+    padding-left: 80px;
+    padding-top: 40px;
 }  
+
+.fSize46 {
+    font-size: 46px;
+}
+
+.mTop10 {
+    margin-top: 10px;
+}
+h2:first-letter {
+    margin-left: -2px
+}
