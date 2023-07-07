@@ -1,9 +1,10 @@
 import './App.css'
 
 function App() {
-
   return (
-    <div>Expence Calculator</div>
+    <div className='main'>
+      Expence Calculator
+      </div>
   )
 }
 
