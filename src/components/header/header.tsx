@@ -1,6 +1,7 @@
-import { FC } from 'react'
-import style from '../header/header.module.css'
-import { Button } from '../button/button'
+import { FC } from 'react';
+import style from '../header/header.module.css';
+import { Button } from '../button/button';
+import {COLOR} from '../../enums';
 
 interface HeaderProps {
   showModal: boolean;
@@ -19,7 +20,7 @@ const Header: FC<HeaderProps> = ({showModal, setShowModal}) => {
       </h4>
     </header>
     <div>
-      <Button showModal={showModal} setShowModal={setShowModal}>Add an Expence</Button>
+      <Button color={COLOR['grey']} showModal={showModal} setShowModal={setShowModal}>Add an Expence</Button>
     </div>
   </div>
 }

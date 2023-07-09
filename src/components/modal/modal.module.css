@@ -18,12 +18,39 @@
   
   .modal {
     display: flex;
-    width: 550px;
+    width: 450px;
     height: 450px;
     flex-direction: column;
+    justify-content: space-around;
     background: white;
     color: white;
     z-index: 10;
     border-radius: 20px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
   }
+
+  .inputBox {
+    display: flex;
+    width: 450px;
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+  }
+
+  .input {
+    height: 45px;
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;  
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(0, 0, 0, 0.2);
+    opacity: 1; /* Firefox */
+  }
+  
