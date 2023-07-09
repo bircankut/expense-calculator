@@ -1,12 +1,17 @@
-import { FC } from 'react'
+import { Children, FC } from 'react'
 import style from '../button/button.module.css'
 
 interface ButtonProps {
-  text: String
+  showModal: boolean;
+  setShowModal: (value: boolean) => void;
+  children: string;
 }
 
-const Button: FC<ButtonProps> = ({text}) => {
-  return <div className={`${style.button} fontLato`}>{text}</div>
+const Button: FC<ButtonProps> = ({children, showModal, setShowModal}) => {
+   
+  return <button className={`${style.button} fontLato`} onClick={()=> setShowModal(!showModal)}>
+    {children}
+    </button>
 }
 
 export { Button }
