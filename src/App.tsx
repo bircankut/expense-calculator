@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from '../src/components/header/header';
 import { ExpenceList } from './components/expence-list/expence-list.tsx';
 import { useState } from 'react';
+import { Modal } from './components/modal/modal.tsx';
 
 interface Expence {
   name: string;
@@ -19,6 +20,7 @@ function App() {
     <div className='main'>
       <Header showModal={showModal} setShowModal={setShowModal}/>
       <ExpenceList/>
+      {showModal && <Modal showModal={showModal} setShowModal={setShowModal}/>}
       </div>
   )
 }
