@@ -1,7 +1,9 @@
 .headerBox {
+    display: flex;
+    flex-direction: row;
     height: 20vh;
-    padding-left: 80px;
-    padding-top: 40px;
+    padding: 40px 80px 0 80px;
+    justify-content: space-between;
 }  
 
 .fSize46 {
