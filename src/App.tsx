@@ -1,12 +1,12 @@
 import './App.css';
 import { Header } from '../src/components/header/header';
-import { ListSection } from '../src/components/list-section/list-section'
+import { ExpenceList } from './components/expence-list/expence-list.tsx';
 
 function App() {
   return (
     <div className='main'>
       <Header/>
-      <ListSection/>
+      <ExpenceList/>
       </div>
   )
 }
