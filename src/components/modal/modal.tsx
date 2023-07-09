@@ -16,7 +16,7 @@ const Modal: FC<ModalProps> = ({showModal, setShowModal}) => {
           X
         </Button>
         <div className={style.inputBox}>
-          <h3 className='fontLato colorDarkGrey'>Adding New Expence</h3>
+          <h3 className={`${style.modalHeader} fontLato colorDarkGrey`}>Adding New Expence</h3>
           <input className={`${style.input} fontLato`} type="text"  placeholder='Name'/>
           <input className={`${style.input} fontLato`}  type="text" placeholder='Price'/>
           <input className={`${style.input} fontLato`}  type="text" placeholder='Percentage Markup'/>
