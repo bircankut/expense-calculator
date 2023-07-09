@@ -8,10 +8,10 @@ interface ListHeaderBoxProps {
 
 const  ListHeaderBox: FC< ListHeaderBoxProps> = ({}) => {
   return <div className={`${style.headersBox} fontLato colorDarkGrey`}>
-    <ExpenceValueHeaders> Name </ExpenceValueHeaders>
-    <ExpenceValueHeaders> Price </ExpenceValueHeaders>
-    <ExpenceValueHeaders> Percentage </ExpenceValueHeaders>
-    <ExpenceValueHeaders> Total </ExpenceValueHeaders>
+    <ExpenceValueHeaders wideness={'35%'}> Name </ExpenceValueHeaders>
+    <ExpenceValueHeaders wideness={'25%'}> Price </ExpenceValueHeaders>
+    <ExpenceValueHeaders wideness={'10%'}> Percentage </ExpenceValueHeaders>
+    <ExpenceValueHeaders wideness={'30%'}> Total </ExpenceValueHeaders>
   </div>
 }
 

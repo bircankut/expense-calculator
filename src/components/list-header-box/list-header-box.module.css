@@ -1,7 +1,6 @@
 .headersBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 300px;
+    padding-right: 50px;
 }
+
