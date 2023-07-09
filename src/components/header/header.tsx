@@ -3,10 +3,11 @@ import style from '../header/header.module.css'
 import { Button } from '../button/button'
 
 interface HeaderProps {
-  
+  showModal: boolean;
+  setShowModal: (value:boolean) => void
 }
 
-const Header: FC<HeaderProps> = ({}) => {
+const Header: FC<HeaderProps> = ({showModal, setShowModal}) => {
   return <div className={style.headerBox}>
     <header>
       <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>
@@ -18,7 +19,7 @@ const Header: FC<HeaderProps> = ({}) => {
       </h4>
     </header>
     <div>
-      <Button text='Add an Expence'></Button>
+      <Button showModal={showModal} setShowModal={setShowModal}>Add an Expence</Button>
     </div>
   </div>
 }
