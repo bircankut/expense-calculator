@@ -4,23 +4,25 @@ import { ExpenceList } from './components/expence-list/expence-list.tsx';
 import { useState } from 'react';
 import { Modal } from './components/modal/modal.tsx';
 
-interface Expence {
+export interface Expence {
   name: string;
   price: number;
   percentageMarkup: number;
-  total: () => {};
+  total: number | null;
 }
 
 
 function App() {
   const [expences, setExpences] = useState<Expence[]>([]);
+  const [wipExpence, setWipExpence] = useState<Partial<Expence>>({});
+
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div className='main'>
       <Header showModal={showModal} setShowModal={setShowModal}/>
       <ExpenceList/>
-      {showModal && <Modal showModal={showModal} setShowModal={setShowModal}/>}
+      {showModal && <Modal wipExpence={wipExpence} handleWipExpenceChange={setWipExpence} showModal={showModal} setShowModal={setShowModal}/>}
       </div>
   )
 }

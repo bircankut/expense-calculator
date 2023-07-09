@@ -8,7 +8,7 @@ interface HeaderProps {
   setShowModal: (value:boolean) => void
 }
 
-const Header: FC<HeaderProps> = ({showModal, setShowModal}) => {
+const Header = ({showModal, setShowModal}:HeaderProps) => {
   return <div className={style.headerBox}>
     <header>
       <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>

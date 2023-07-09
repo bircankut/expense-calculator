@@ -6,7 +6,7 @@ interface ExpenceListProps {
   
 }
 
-const ExpenceList: FC<ExpenceListProps> = ({}) => {
+const ExpenceList = ({}:ExpenceListProps) => {
   return <div className={style.expenceListBox}>
     <ListHeaderBox/>
   </div>

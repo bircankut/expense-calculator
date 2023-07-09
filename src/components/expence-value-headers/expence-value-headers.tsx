@@ -6,7 +6,7 @@ interface ExpenceValueHeadersProps {
   wideness: string;
 }
 
-const ExpenceValueHeaders: FC<ExpenceValueHeadersProps> = ({children, wideness}) => {
+const ExpenceValueHeaders = ({children, wideness}: ExpenceValueHeadersProps) => {
   return <div className={style.expenceValueHeader} style={{width: `${wideness}`}}>{children}</div>
 }
 

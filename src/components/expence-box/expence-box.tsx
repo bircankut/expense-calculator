@@ -7,8 +7,8 @@ interface ExpenceBoxProps {
 }
 
 
-const ExpenceBox: FC<ExpenceBoxProps> = ({
-}) => {
+const ExpenceBox = ({
+}:ExpenceBoxProps) => {
   return <div>expence-box</div>
 }
 

@@ -6,7 +6,7 @@ interface ListHeaderBoxProps {
   
 }
 
-const  ListHeaderBox: FC< ListHeaderBoxProps> = ({}) => {
+const  ListHeaderBox = ({}:ListHeaderBoxProps) => {
   return <div className={`${style.headersBox} fontLato colorDarkGrey`}>
     <ExpenceValueHeaders wideness={'35%'}> Name </ExpenceValueHeaders>
     <ExpenceValueHeaders wideness={'25%'}> Price </ExpenceValueHeaders>

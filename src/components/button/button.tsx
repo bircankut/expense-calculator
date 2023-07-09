@@ -10,7 +10,7 @@ interface ButtonProps {
   iconButton?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({children, showModal, setShowModal, color, iconButton}) => {
+const Button = ({children, showModal, setShowModal, color, iconButton}: ButtonProps) => {
    
   return <button style={{ backgroundColor: `${color}` }} className={iconButton ? `${style.iconButton} fontLato` :`${style.button} fontLato`} onClick={()=> setShowModal(!showModal)}>
     {children}
