@@ -12,7 +12,7 @@ const Header = ({showModal, setShowModal}:HeaderProps) => {
   return <div className={style.headerBox}>
     <header>
       <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>
-        Expence Calculater
+        Expence Calculator
       </h2>
 
       <h4 className={`${style.mTop10} fontLato colorDarkGrey`}>
