@@ -20,7 +20,7 @@ const Header = ({showModal, setShowModal}:HeaderProps) => {
       </h4>
     </header>
     <div>
-      <Button color={COLOR['grey']} onClick={() => setShowModal(!showModal)}>Add an Expence</Button>
+      <Button color={COLOR['darkGrey']} onClick={() => setShowModal(!showModal)}>Add an Expence</Button>
     </div>
   </div>
 }

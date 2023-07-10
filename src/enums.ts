@@ -1,3 +1,3 @@
 export enum COLOR {
-  grey = "#424242",
+  darkGrey = "#424242",
 }

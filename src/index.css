@@ -56,6 +56,10 @@ table {
 	color: rgba(66,66,66,1);
 }
 
+.colorLigthGrey {
+	color: rgba(103,103,103,1)
+}
+
 * {
 	box-sizing: border-box;
 }
