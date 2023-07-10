@@ -63,7 +63,7 @@ const Modal = ({ showModal, setShowModal, wipExpence, handleWipExpenceChange, in
           <input className={`${style.input} fontLato`} type="text" value={wipExpence.name} onChange={handleNameChange} placeholder='Name' />
           <input className={`${style.input} fontLato`} type="text" value={wipExpence.price} onChange={handlePriceChange} placeholder='Price' />
           <input className={`${style.input} fontLato`} type="text" value={wipExpence.percentageMarkup} onChange={handlePercentageChange} placeholder='Percentage Markup' />
-          <Button color={COLOR['grey']} onClick={() => { addExpence(wipExpence) }}>
+          <Button color={COLOR['darkGrey']} onClick={() => { addExpence(wipExpence); setShowModal(!showModal)}}>
             Add an Expence
           </Button>
         </div>

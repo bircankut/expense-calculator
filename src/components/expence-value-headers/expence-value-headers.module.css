@@ -2,6 +2,6 @@
     padding: 5px;
 }
 
-.expenceValueHeader:last-child{
+.expenceValueHeader:nth-last-child(-n+2){
     text-align: center;
 }
