@@ -1,6 +1,26 @@
-.expenceListBox {
-    height: 80vh;
-    border-radius: 80px 80px 0 0;
+.container {
     background-color: rgb(246, 246, 246);
-    padding: 40px 80px 0px 80px;
+    height: 80vh;
+    padding: 50px 80px;
+    border-radius: 90px 90px 0 0;
+}
+.gridScroller {
+    overflow: scroll;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 10px;
+}
+  
+.gridHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.expenceBox {
+    border-bottom: 1px solid rgba(66,66,66,0.5);
+    margin: 30px 0;
 }

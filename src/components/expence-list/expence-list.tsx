@@ -9,10 +9,27 @@ interface ExpenceListProps {
 }
 
 const ExpenceList = ({expences}:ExpenceListProps) => {
-  return <div className={style.expenceListBox}>
-    <ListHeaderBox/>
-    <ExpenceBox expences={expences}></ExpenceBox>
-  </div>
+  return (
+    <section className={`${style.container} fontLato colorDarkGrey`}>
+      <div className={style.grid}>
+          <div className={style.gridHeader}>Name</div>
+          <div className={style.gridHeader}>Price</div>
+          <div className={style.gridHeader}>Percentage Markup</div>
+          <div className={style.gridHeader}>Total</div>
+      </div>
+      <div>
+      {expences.map((el)=>{
+            return <div className={`${style.grid} ${style.expenceBox}`}>
+              <div className={style.gridEntry}>{el.name}</div>
+              <div className={style.gridEntry}>{el.price} €</div>
+              <div className={style.gridEntry}>{el.percentageMarkup}</div>
+              <div className={style.gridEntry}>{el.total?.toString()} €</div>
+              </div>
+          })}
+      </div>
+    
+    </section>
+  )
 }
 
 export { ExpenceList }

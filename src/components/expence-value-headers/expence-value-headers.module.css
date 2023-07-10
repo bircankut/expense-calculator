@@ -1,7 +1,0 @@
-.expenceValueHeader {
-    padding: 5px;
-}
-
-.expenceValueHeader:nth-last-child(-n+2){
-    text-align: center;
-}
