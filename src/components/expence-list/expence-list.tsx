@@ -1,14 +1,29 @@
-import { FC } from 'react'
 import style from '../expence-list/expence-list.module.css'
-import { ListHeaderBox }  from '../list-header-box/list-header-box.tsx'
-import { ExpenceBox } from '../expence-box/expence-box.tsx';
-import { Expence } from '../../App';
+import { useExpence } from '../../contexts/expence'
 
 interface ExpenceListProps {
-  expences: Expence[];
+
 }
 
-const ExpenceList = ({expences}:ExpenceListProps) => {
+const ExpenceList = ({}:ExpenceListProps) => {
+  const {expences, wipExpence, updateWipExpence, setExpences, intertWipExpenceToExpences} = useExpence();
+
+  function handleNameChange(e: any) {
+    updateWipExpence({
+      name: e.target.value
+    });
+  };
+  function handlePriceChange(e: any) {
+    updateWipExpence({
+      price: e.target.value,
+    });
+  };
+  function handlePercentageChange(e: any) {
+    updateWipExpence({
+      percentageMarkup: e.target.value,
+    });
+  };
+
   return (
     <section className={`${style.container} fontLato colorDarkGrey`}>
       <div className={style.grid}>
@@ -20,11 +35,15 @@ const ExpenceList = ({expences}:ExpenceListProps) => {
       <div>
       {expences.map((el)=>{
             return <div className={`${style.grid} ${style.expenceBox}`}>
-              <div className={style.gridEntry}>{el.name}</div>
-              <div className={style.gridEntry}>{el.price} €</div>
-              <div className={style.gridEntry}>{el.percentageMarkup}</div>
-              <div className={style.gridEntry}>{el.total?.toString()} €</div>
-              </div>
+              <input className={`${style.gridEntry} ${style.input} fontLato colorDarkGrey`} 
+              value={el.name} type="text" onChange={handleNameChange}/>
+              <input className={`${style.gridEntry} ${style.input} fontLato colorDarkGrey`} 
+              value={`${el.price} €`} type="text" onChange={handlePriceChange}/>
+              <input className={`${style.gridEntry} ${style.input} fontLato colorDarkGrey`} 
+              value={`%${el.percentageMarkup}`} type="text" onChange={handlePercentageChange}/>
+              <input className={`${style.gridEntry} ${style.input} fontLato colorDarkGrey`} 
+              value={`${el.total?.toString()} €`} type="text" />
+            </div>
           })}
       </div>
     
