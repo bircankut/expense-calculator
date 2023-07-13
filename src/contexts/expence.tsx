@@ -1,10 +1,12 @@
 import { useState, useContext, ReactNode, createContext } from 'react'
 import { Expence, WipExpence } from '../types/expence';
-import BigNumber from 'bignumber.js';
+import { generateId } from '../utils/generate-id';
+import { calculateValueRatio } from '../utils/calculate-percentage';
 
 interface ExpenceContextData {
     expences: Expence[];
     setExpences: (value: Expence[]) => void;
+    updateExpence: (expenceId: string, values: Partial<Expence>) => void;
     wipExpence: WipExpence;
     setWipExpence: (value: WipExpence) => void;
     updateWipExpence: (value: WipExpence) => void;
@@ -14,6 +16,7 @@ interface ExpenceContextData {
 const ExpenceContext = createContext<ExpenceContextData>({
     expences: [],
     setExpences: () => undefined,
+    updateExpence: () => undefined,
     wipExpence: {},
     setWipExpence: () => undefined,
     updateWipExpence: () => undefined,
@@ -34,24 +37,31 @@ const WithExpence = ({ children }: ExpenceProps) => {
         setWipExpence({ ...wipExpence, ...value });
     }
 
-    const getTotal = (_wipExpence: WipExpence): BigNumber => {
-        const { price, percentageMarkup } = _wipExpence;
+    const updateExpence = (expenceId: string, values: Partial<Expence>) => {
+        const newExpences = [...expences];
+        const selectedExpence = newExpences.find(_expence => _expence.id == expenceId);
 
-        if (!price || !percentageMarkup) {
-            return new BigNumber(0);
+        if (!selectedExpence) {
+            return;
         }
 
-        const priceAsBigNumber = new BigNumber(price);
-        const percentageAsBigNumber = new BigNumber(percentageMarkup);
-        return priceAsBigNumber.multipliedBy(percentageAsBigNumber.plus(100)).dividedBy(100);
-    };
+        Object.assign(selectedExpence, values);
+
+        if ("price" in values || "percentageMarkup" in values) {
+            selectedExpence.total = calculateValueRatio(selectedExpence.price, selectedExpence.percentageMarkup);
+        }
+
+        setExpences(newExpences);
+    }
 
     const intertWipExpenceToExpences = () => {
-        setExpences([...expences, { ...wipExpence, total: getTotal(wipExpence)} as Expence]);
+        const { price, percentageMarkup } = wipExpence;
+        const total = calculateValueRatio(price, percentageMarkup);
+        setExpences([...expences, { ...wipExpence, total, id: generateId() } as Expence]);
         setWipExpence({});
     }
 
-    return <ExpenceContext.Provider value={{ expences, setExpences, wipExpence, setWipExpence, updateWipExpence, intertWipExpenceToExpences }}>{children}</ExpenceContext.Provider>
+    return <ExpenceContext.Provider value={{ expences, setExpences, updateExpence, wipExpence, setWipExpence, updateWipExpence, intertWipExpenceToExpences }}>{children}</ExpenceContext.Provider>
 }
 
 export { WithExpence, useExpence };
