@@ -1,28 +1,35 @@
-import { FC } from 'react';
-import style from '../header/header.module.css';
-import { Button } from '../button/button';
-import {COLOR} from '../../enums';
+import { FC } from "react";
+import style from "../header/header.module.css";
+import { Button } from "../button/button";
+import { COLOR } from "../../enums";
 
 interface HeaderProps {
   showModal: boolean;
-  setShowModal: (value:boolean) => void
+  setShowModal: (value: boolean) => void;
 }
 
-const Header = ({showModal, setShowModal}:HeaderProps) => {
-  return <div className={style.headerBox}>
-    <header>
-      <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>
-        Expence Calculator
-      </h2>
+const Header = ({ showModal, setShowModal }: HeaderProps) => {
+  return (
+    <div className={style.headerBox}>
+      <header>
+        <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>
+          Expence Calculator
+        </h2>
 
-      <h4 className={`${style.mTop10} fontLato colorDarkGrey`}>
-        List of Expences
-      </h4>
-    </header>
-    <div>
-      <Button color={COLOR['darkGrey']} onClick={() => setShowModal(!showModal)}>Add an Expence</Button>
+        <h4 className={`${style.mTop10} fontLato colorDarkGrey`}>
+          List of Expences
+        </h4>
+      </header>
+      <div>
+        <Button
+          color={COLOR["darkGrey"]}
+          onClick={() => setShowModal(!showModal)}
+        >
+          Add an Expence
+        </Button>
+      </div>
     </div>
-  </div>
-}
+  );
+};
 
-export { Header }
+export { Header };

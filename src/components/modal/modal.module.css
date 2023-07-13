@@ -1,59 +1,60 @@
 .darkBG {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  }
-  
-  .centered {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .modal {
-    display: flex;
-    width: 950px;
-    height: 450px;
-    flex-direction: column;
-    justify-content: space-around;
-    background: white;
-    color: white;
-    z-index: 10;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-  }
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
 
-  .inputBox {
-    display: flex;
-    width: 950px;
-    height: 350px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-  }
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .input {
-    height: 45px;
-    width: 880px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: none;  
-    border-radius: 5px;
-    padding-left: 10px;
-  }
+.modal {
+  display: flex;
+  width: 950px;
+  height: 450px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  color: white;
+  z-index: 10;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(0, 0, 0, 0.2);
-    opacity: 1; /* Firefox */
-  }
-  
+.inputBox {
+  display: flex;
+  width: 950px;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.input {
+  height: 45px;
+  width: 880px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.2);
+  opacity: 1; /* Firefox */
+}
+
 .modalHeader {
   font-size: 20px;
 }

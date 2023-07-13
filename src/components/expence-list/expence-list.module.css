@@ -1,11 +1,11 @@
 .container {
-    background-color: rgb(246, 246, 246);
-    height: 80vh;
-    padding: 50px 80px 80px 50px;
-    border-radius: 90px 90px 0 0;
+  background-color: rgb(246, 246, 246);
+  height: 80vh;
+  padding: 50px 80px 80px 50px;
+  border-radius: 90px 90px 0 0;
 }
 
 .scrollBox {
-    height: 55vh;
-    overflow: scroll;
+  height: 55vh;
+  overflow: scroll;
 }

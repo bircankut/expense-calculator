@@ -1,18 +1,18 @@
 .headerBox {
-    display: flex;
-    flex-direction: row;
-    height: 20vh;
-    padding: 40px 80px 0 80px;
-    justify-content: space-between;
-}  
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  padding: 40px 80px 0 80px;
+  justify-content: space-between;
+}
 
 .fSize46 {
-    font-size: 46px;
+  font-size: 46px;
 }
 
 .mTop10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 h2:first-letter {
-    margin-left: -2px
+  margin-left: -2px;
 }

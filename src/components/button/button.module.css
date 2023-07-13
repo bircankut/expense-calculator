@@ -1,22 +1,22 @@
 .button {
-    display: flex;
-    height: 45px;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    border-radius: 10px;
-    color: rgba(255, 253, 250,1);
-    border: none;
+  display: flex;
+  height: 45px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 10px;
+  color: rgba(255, 253, 250, 1);
+  border: none;
 }
 
 .iconButton {
-    height: 35px;
-    width: 35px;
-    border-radius: 25px;
-    border: none;
-    color: rgba(255, 253, 250,1);
-    margin-left: auto; 
-    margin-right: 30px;
-    margin-top: 10px;
-  }
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  border: none;
+  color: rgba(255, 253, 250, 1);
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 10px;
+}
