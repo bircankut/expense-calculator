@@ -1,0 +1,18 @@
+.headerBox {
+    height: 8vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 20% 12% 24% 2%;
+    padding: 20px 10px;
+}
+  
+.gridHeader {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.gridHeader:last-child {
+    margin-left: 40px;
+}

@@ -20,9 +20,9 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
   };
 
   function handlePriceChange(e: any) {
-    updateWipExpence({
-      price: e.target.value,
-    });
+      updateWipExpence({
+        price: e.target.value,
+      });
   };
 
   function handlePercentageChange(e: any) {
@@ -41,9 +41,9 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
       <div className={style.modal}>
         <div className={style.inputBox}>
           <h3 className={`${style.modalHeader} fontLato colorDarkGrey`}>Adding New Expence</h3>
-          <input className={`${style.input} fontLato`} type="text" value={wipExpence.name} onChange={handleNameChange} placeholder='Name' />
-          <input className={`${style.input} fontLato`} type="text" value={wipExpence.price} onChange={handlePriceChange} placeholder='Price' />
-          <input className={`${style.input} fontLato`} type="text" value={wipExpence.percentageMarkup} onChange={handlePercentageChange} placeholder='Percentage Markup' />
+          <input className={`${style.input} fontLato`} type="text" value={wipExpence.name || ""} onChange={handleNameChange} placeholder='Name' />
+          <input className={`${style.input} fontLato`} type="text" value={wipExpence.price || ""} onChange={handlePriceChange} placeholder='Price' />
+          <input className={`${style.input} fontLato`} type="text" value={wipExpence.percentageMarkup || ""} onChange={handlePercentageChange} placeholder='Percentage Markup' />
           <Button color={COLOR['darkGrey']} onClick={onAddButtonClick}>
             Add an Expence
           </Button>

@@ -5,7 +5,6 @@ import { WithExpence } from './contexts/expence';
 import { useState } from 'react';
 import { Modal } from './components/modal/modal.tsx';
 
-
 function App() {
   const [showModal, setShowModal] = useState(false);
 
