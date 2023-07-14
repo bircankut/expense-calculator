@@ -53,7 +53,7 @@ const ExpenseItems = ({}: ExpenseItemsProps) => {
                   handlePercentageChange(event, el.id);
                 }}
               />
-              <span className={style.span}>€</span>
+              <span className={style.span}>%</span>
             </div>
             <p
               className={`${style.total} ${style.item}  fontLato colorDarkGrey`}
