@@ -1,5 +1,6 @@
 import { useExpence } from "../../contexts/expence";
 import style from "../expence-items/expence-items.module.css";
+import ExpenceListHeaders from "../expence-list-headers/expence-list-headers";
 
 interface ExpenceItemsProps {}
 
@@ -19,10 +20,11 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
   };
   return (
     <ul>
+      <ExpenceListHeaders />
       {expences.map((el) => {
         return (
           <li key={el.id} className={`${style.grid} ${style.expenceBox}`}>
-            <div className={style.itemStyleForPhone}>
+            <div className={style.item}>
               <label className={style.label}>Name:</label>
               <input
                 className={`${style.input} fontLato colorDarkGrey`}
@@ -31,16 +33,16 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
                 onChange={(event) => handleNameChange(event, el.id)}
               />
             </div>
-            <div className={style.itemStyleForPhone}>
+            <div className={style.item}>
               <label className={style.label}>Price:</label>
               <input
                 className={`${style.input}  ${style.input} fontLato colorDarkGrey`}
                 value={el.price}
                 type="text"
                 onChange={(event) => handlePriceChange(event, el.id)}
-              />
+              /><span className={style.span}>€</span>
             </div>
-            <div className={style.itemStyleForPhone}>
+            <div className={style.item}>
               <label className={style.label}>Percentage:</label>
               <input
                 className={`${style.input} fontLato colorDarkGrey`}
@@ -49,13 +51,13 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
                 onChange={(event) => {
                   handlePercentageChange(event, el.id);
                 }}
-              />
+              /><span className={style.span}>€</span>
             </div>
             <p
-              className={`${style.input} ${style.itemStyleForPhone}  fontLato colorDarkGrey`}
+              className={`${style.total} ${style.item}  fontLato colorDarkGrey`}
             >
               <label className={style.label}>Total:</label>
-              {el.total?.toString()}
+              {el.total?.toString()} €
             </p>
 
             <button

@@ -6,8 +6,9 @@
 }
 
 .scrollBox {
-  height: 55vh;
+  height: 60vh;
   overflow-y: scroll;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {

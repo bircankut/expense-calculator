@@ -5,12 +5,20 @@ interface expenceListHeadersProps {}
 
 const expenceListHeaders: FC<expenceListHeadersProps> = ({}) => {
   return (
-    <div className={`${style.headerBox} ${style.grid}`}>
-      <p className={style.gridHeader}>Name</p>
-      <p className={style.gridHeader}>Price</p>
-      <p className={style.gridHeader}>Percentage Markup</p>
-      <p className={style.gridHeader}>Total</p>
-    </div>
+    <li className={`${style.grid} ${style.headerBox}`}>
+      <div className={style.item}>Name</div>
+      <div className={style.item}>Price</div>
+      <div className={style.item}>
+        <p>Percentange Markup</p>
+      </div>
+      <p
+        className={`${style.input} ${style.item}  fontLato colorDarkGrey`}
+      >
+        Total
+      </p>
+
+      <span />
+    </li>
   );
 };
 

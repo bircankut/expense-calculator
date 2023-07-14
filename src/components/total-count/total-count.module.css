@@ -15,9 +15,4 @@
   margin-top: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For mobile phones: */
-  .expenceTotal {
-    display: none;
-  }
-}
+
