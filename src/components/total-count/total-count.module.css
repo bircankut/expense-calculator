@@ -4,7 +4,7 @@
   justify-content: center;
   float: right;
   height: 50px;
-  width: 200px;
+  min-width: 200px;
   color: rgba(66, 66, 66, 1);
   font-weight: 500;
   font-size: 20px;
@@ -13,4 +13,11 @@
 .expencesTotalBox {
   height: 6vh;
   margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .expenceTotal {
+    display: none;
+  }
 }

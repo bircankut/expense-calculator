@@ -7,5 +7,22 @@
 
 .scrollBox {
   height: 55vh;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .container {
+    height: 100%;
+    padding: 10px;
+    border-radius: 40px 40px 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .scrollBox {
+    height: 65vh;
+    margin-bottom: 10px;
+  }
 }

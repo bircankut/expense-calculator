@@ -29,6 +29,16 @@
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .modal {
+    height: 55vh;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .inputBox {
   display: flex;
   width: 950px;
@@ -39,6 +49,15 @@
   padding: 30px 50px;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .inputBox {
+    height: 80%;
+    width: 90%;
+    padding: 10px;
+  }
+}
+
 .input {
   height: 45px;
   width: 880px;
@@ -47,6 +66,14 @@
   box-shadow: none;
   border-radius: 5px;
   padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .input {
+    width: 100%;
+    height: 40px;
+  }
 }
 
 ::placeholder {

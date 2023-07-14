@@ -1,6 +1,5 @@
-import { FC, ComponentProps } from "react";
+import { ComponentProps } from "react";
 import style from "../button/button.module.css";
-import { COLOR } from "../../enums";
 
 interface ButtonProps {
   onClick: ComponentProps<"button">["onClick"];

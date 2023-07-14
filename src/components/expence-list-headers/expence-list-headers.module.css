@@ -1,11 +1,20 @@
 .headerBox {
   height: 8vh;
+  position: fixed;
+  width: 100%;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 40% 20% 12% 24% 2%;
   padding: 20px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .headerBox {
+    display: none;
+  }
 }
 
 .gridHeader {

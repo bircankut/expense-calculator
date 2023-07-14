@@ -6,8 +6,23 @@
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .headerBox {
+    padding: 20px 30px 10px 30px;
+    flex-direction: column;
+  }
+}
+
 .fSize46 {
   font-size: 46px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .fSize46 {
+    font-size: 32px;
+  }
 }
 
 .mTop10 {
@@ -15,4 +30,11 @@
 }
 h2:first-letter {
   margin-left: -2px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  h2:first-letter {
+    margin-left: 0;
+  }
 }

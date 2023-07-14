@@ -11,7 +11,7 @@ const TotalCount = () => {
 
   return (
     <div className={style.expencesTotalBox}>
-      <p className={style.expenceTotal}>{total.toString()} €</p>
+      <p className={style.expenceTotal}>Total Count: {total.toString()} €</p>
     </div>
   );
 };
