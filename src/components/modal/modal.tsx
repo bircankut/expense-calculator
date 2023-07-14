@@ -13,11 +13,9 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
     useExpence();
 
   function handleNameChange(e: any) {
-    console.log(e.target.value);
-
-    updateWipExpence({
-      name: e.target.value,
-    });
+      updateWipExpence({
+        name: e.target.value,
+      });
   }
 
   function handlePriceChange(e: any) {
@@ -33,8 +31,14 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
   }
 
   const onAddButtonClick = () => {
+    console.log('bircan', wipExpence.name)
+    if (wipExpence.name === '' || wipExpence.name ===undefined) {
+      alert('Input value cannot be empty!');
+    }
+    else{
     intertWipExpenceToExpences();
     setShowModal(!showModal);
+    }
   };
 
   return (
@@ -54,14 +58,14 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
             />
             <input
               className={`${style.input} fontLato`}
-              type="text"
+              type="number"
               value={wipExpence.price || ""}
               onChange={handlePriceChange}
               placeholder="Price"
             />
             <input
               className={`${style.input} fontLato`}
-              type="text"
+              type="number"
               value={wipExpence.percentageMarkup || ""}
               onChange={handlePercentageChange}
               placeholder="Percentage Markup"
