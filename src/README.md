@@ -29,7 +29,7 @@ Go to the project directory
 
 ```bash
 
-cd expence-calculator
+cd expense-calculator
 
 ```
 
