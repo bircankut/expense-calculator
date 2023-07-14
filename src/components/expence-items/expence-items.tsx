@@ -38,7 +38,7 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
               <input
                 className={`${style.input}  ${style.input} fontLato colorDarkGrey`}
                 value={el.price}
-                type="text"
+                type="number"
                 onChange={(event) => handlePriceChange(event, el.id)}
               /><span className={style.span}>€</span>
             </div>
@@ -47,7 +47,7 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
               <input
                 className={`${style.input} fontLato colorDarkGrey`}
                 value={el.percentageMarkup}
-                type="text"
+                type="number"
                 onChange={(event) => {
                   handlePercentageChange(event, el.id);
                 }}

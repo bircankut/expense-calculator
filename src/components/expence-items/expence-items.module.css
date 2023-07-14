@@ -25,6 +25,7 @@
   box-shadow: none;
   font-size: 15px;
   padding: 5px;
+  width: 100%;
 }
 
 input:focus { 
@@ -32,6 +33,14 @@ input:focus {
   border-color: #719ECE;
   box-shadow: none;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .input {
+    width: unset;
+  }
+}
+
 
 .total {
   display: flex;
@@ -47,6 +56,10 @@ input:focus {
   box-shadow: none;
   border: none;
   font-size: 20px;
+}
+
+.item {
+  padding-right: 20px;
 }
 
 @media only screen and (max-width: 768px) {
