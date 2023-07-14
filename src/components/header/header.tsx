@@ -1,4 +1,3 @@
-import { FC } from "react";
 import style from "../header/header.module.css";
 import { Button } from "../button/button";
 import { COLOR } from "../../enums";
