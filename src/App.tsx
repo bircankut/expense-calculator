@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header } from "../src/components/header/header";
-import { ExpenceList } from "./components/expence-list/expence-list";
-import { WithExpence } from "./contexts/expence";
+import { ExpenseList } from "./components/expense-list/expense-list";
+import { WithExpense } from "./contexts/expense";
 import { useState } from "react";
 import { Modal } from "./components/modal/modal.tsx";
 
@@ -9,15 +9,15 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <WithExpence>
+    <WithExpense>
       <div className="main">
         <Header showModal={showModal} setShowModal={setShowModal} />
-        <ExpenceList />
+        <ExpenseList />
         {showModal && (
           <Modal showModal={showModal} setShowModal={setShowModal} />
         )}
       </div>
-    </WithExpence>
+    </WithExpense>
   );
 }
 export default App;

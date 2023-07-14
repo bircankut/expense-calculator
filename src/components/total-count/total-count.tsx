@@ -1,17 +1,17 @@
 import BigNumber from "bignumber.js";
-import { useExpence } from "../../contexts/expence";
+import { useExpense } from "../../contexts/expense";
 import style from "../total-count/total-count.module.css";
 
 const TotalCount = () => {
-  const { expences } = useExpence();
+  const { expenses } = useExpense();
 
-  const total = expences.reduce((acc, expence) => {
-    return acc.plus(expence.total);
+  const total = expenses.reduce((acc, expense) => {
+    return acc.plus(expense.total);
   }, new BigNumber(0));
 
   return (
-    <div className={style.expencesTotalBox}>
-      <p className={style.expenceTotal}>Total Count: {total.toString()} €</p>
+    <div className={style.expensesTotalBox}>
+      <p className={style.expenseTotal}>Total Count: {total.toString()} €</p>
     </div>
   );
 };

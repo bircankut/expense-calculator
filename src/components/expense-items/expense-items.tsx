@@ -1,29 +1,29 @@
-import { useExpence } from "../../contexts/expence";
-import style from "../expence-items/expence-items.module.css";
-import ExpenceListHeaders from "../expence-list-headers/expence-list-headers";
+import { useExpense } from "../../contexts/expense";
+import style from "../expense-items/expense-items.module.css";
+import ExpenseListHeaders from "../expense-list-headers/expense-list-headers";
 
-interface ExpenceItemsProps {}
+interface ExpenseItemsProps {}
 
-const ExpenceItems = ({}: ExpenceItemsProps) => {
-  const { expences, updateExpence, setExpences } = useExpence();
+const ExpenseItems = ({}: ExpenseItemsProps) => {
+  const { expenses, updateExpense, setExpenses } = useExpense();
 
   const handleNameChange = (e: any, id: string) => {
-    updateExpence(id, { name: e.target.value });
+    updateExpense(id, { name: e.target.value });
   };
 
   const handlePriceChange = (e: any, id: string) => {
-    updateExpence(id, { price: e.target.value });
+    updateExpense(id, { price: e.target.value });
   };
 
   const handlePercentageChange = (e: any, id: string) => {
-    updateExpence(id, { percentageMarkup: e.target.value });
+    updateExpense(id, { percentageMarkup: e.target.value });
   };
   return (
     <ul>
-      <ExpenceListHeaders />
-      {expences.map((el) => {
+      <ExpenseListHeaders />
+      {expenses.map((el) => {
         return (
-          <li key={el.id} className={`${style.grid} ${style.expenceBox}`}>
+          <li key={el.id} className={`${style.grid} ${style.expenseBox}`}>
             <div className={style.item}>
               <label className={style.label}>Name:</label>
               <input
@@ -40,7 +40,8 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
                 value={el.price}
                 type="number"
                 onChange={(event) => handlePriceChange(event, el.id)}
-              /><span className={style.span}>€</span>
+              />
+              <span className={style.span}>€</span>
             </div>
             <div className={style.item}>
               <label className={style.label}>Percentage:</label>
@@ -51,7 +52,8 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
                 onChange={(event) => {
                   handlePercentageChange(event, el.id);
                 }}
-              /><span className={style.span}>€</span>
+              />
+              <span className={style.span}>€</span>
             </div>
             <p
               className={`${style.total} ${style.item}  fontLato colorDarkGrey`}
@@ -63,8 +65,8 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
             <button
               className={style.deleteButton}
               onClick={() => {
-                setExpences(
-                  expences.filter((_expence) => _expence.id !== el.id),
+                setExpenses(
+                  expenses.filter((_expense) => _expense.id !== el.id),
                 );
               }}
             >
@@ -77,4 +79,4 @@ const ExpenceItems = ({}: ExpenceItemsProps) => {
   );
 };
 
-export { ExpenceItems };
+export { ExpenseItems };

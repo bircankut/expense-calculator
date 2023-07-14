@@ -1,6 +1,6 @@
 import type BigNumber from "bignumber.js";
 
-export interface Expence {
+export interface Expense {
   id: string;
   name: string;
   price: number;
@@ -8,4 +8,4 @@ export interface Expence {
   total: BigNumber;
 }
 
-export type WipExpence = Partial<Omit<Expence, "id" | "total">>;
+export type WipExpense = Partial<Omit<Expense, "id" | "total">>;

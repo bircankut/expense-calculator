@@ -13,24 +13,24 @@
   }
 }
 
-.expenceBox {
+.expenseBox {
   border-bottom: 1px solid rgba(66, 66, 66, 0.5);
   margin-top: 30px;
 }
 
 .input {
   background-color: transparent;
-  border:none;
-  border-bottom: 2px dashed  rgba(66, 66, 66, 0.5);
+  border: none;
+  border-bottom: 2px dashed rgba(66, 66, 66, 0.5);
   box-shadow: none;
   font-size: 15px;
   padding: 5px;
   width: 100%;
 }
 
-input:focus { 
+input:focus {
   outline: none !important;
-  border-color: #719ECE;
+  border-color: #719ece;
   box-shadow: none;
 }
 
@@ -41,14 +41,12 @@ input:focus {
   }
 }
 
-
 .total {
   display: flex;
   align-items: center;
   background-color: transparent;
   font-size: 15px;
 }
-
 
 .deleteButton {
   color: rgba(66, 66, 66, 1);
@@ -94,8 +92,8 @@ input:focus {
   }
 }
 
-.span{
+.span {
   display: inline;
   margin-left: -15px;
-  background-color:  rgb(246, 246, 246);
+  background-color: rgb(246, 246, 246);
 }

@@ -13,11 +13,11 @@ const Header = ({ showModal, setShowModal }: HeaderProps) => {
     <div className={style.headerBox}>
       <header>
         <h2 className={`${style.fSize46} fontLato colorDarkGrey`}>
-          Expence Calculator
+          Expense Calculator
         </h2>
 
         <h4 className={`${style.mTop10} fontLato colorDarkGrey`}>
-          List of Expences
+          List of Expenses
         </h4>
       </header>
       <div>
@@ -25,7 +25,7 @@ const Header = ({ showModal, setShowModal }: HeaderProps) => {
           color={COLOR["darkGrey"]}
           onClick={() => setShowModal(!showModal)}
         >
-          Add an Expence
+          Add an Expense
         </Button>
       </div>
     </div>

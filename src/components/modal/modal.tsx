@@ -1,7 +1,7 @@
 import style from "../modal/modal.module.css";
 import { Button } from "../button/button";
 import { COLOR } from "../../enums";
-import { useExpence } from "../../contexts/expence";
+import { useExpense } from "../../contexts/expense";
 
 interface ModalProps {
   showModal: boolean;
@@ -9,35 +9,34 @@ interface ModalProps {
 }
 
 const Modal = ({ showModal, setShowModal }: ModalProps) => {
-  const { updateWipExpence, wipExpence, intertWipExpenceToExpences } =
-    useExpence();
+  const { updateWipExpense, wipExpense, intertWipExpenseToExpenses } =
+    useExpense();
 
   function handleNameChange(e: any) {
-      updateWipExpence({
-        name: e.target.value,
-      });
+    updateWipExpense({
+      name: e.target.value,
+    });
   }
 
   function handlePriceChange(e: any) {
-    updateWipExpence({
+    updateWipExpense({
       price: e.target.value,
     });
   }
 
   function handlePercentageChange(e: any) {
-    updateWipExpence({
+    updateWipExpense({
       percentageMarkup: e.target.value,
     });
   }
 
   const onAddButtonClick = () => {
-    console.log('bircan', wipExpence.name)
-    if (wipExpence.name === '' || wipExpence.name ===undefined) {
-      alert('Input value cannot be empty!');
-    }
-    else{
-    intertWipExpenceToExpences();
-    setShowModal(!showModal);
+    console.log("bircan", wipExpense.name);
+    if (wipExpense.name === "" || wipExpense.name === undefined) {
+      alert("Input value cannot be empty!");
+    } else {
+      intertWipExpenseToExpenses();
+      setShowModal(!showModal);
     }
   };
 
@@ -47,31 +46,31 @@ const Modal = ({ showModal, setShowModal }: ModalProps) => {
         <div className={style.modal}>
           <div className={style.inputBox}>
             <h3 className={`${style.modalHeader} fontLato colorDarkGrey`}>
-              Adding New Expence
+              Adding New Expense
             </h3>
             <input
               className={`${style.input} fontLato`}
               type="text"
-              value={wipExpence.name || ""}
+              value={wipExpense.name || ""}
               onChange={handleNameChange}
               placeholder="Name"
             />
             <input
               className={`${style.input} fontLato`}
               type="number"
-              value={wipExpence.price || ""}
+              value={wipExpense.price || ""}
               onChange={handlePriceChange}
               placeholder="Price"
             />
             <input
               className={`${style.input} fontLato`}
               type="number"
-              value={wipExpence.percentageMarkup || ""}
+              value={wipExpense.percentageMarkup || ""}
               onChange={handlePercentageChange}
               placeholder="Percentage Markup"
             />
             <Button color={COLOR["darkGrey"]} onClick={onAddButtonClick}>
-              Add an Expence
+              Add an Expense
             </Button>
           </div>
         </div>
