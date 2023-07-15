@@ -3,11 +3,11 @@
 This project is designed to facilitate the calculation and modification of multiple expenses for film producers.
 You can reach project on:
 
-[producing-expense-calculator.vercel.app](producing-expense-calculator.vercel.app)
+[producing-expense-calculator.vercel.app](https://producing-expense-calculator.vercel.app)
 
-![project-screenshot-web](assets/screenshots/project-web.png)
+![project-screenshot-web](src/assets/screenshots/project-web.png)
 
-<img src="assets/screenshots/project-mobile.png" alt="drawing" width="200" height="auto"/>
+<img src="src/assets/screenshots/project-mobile.png" alt="drawing" width="200" height="auto"/>
 
 ## Run Locally
 
@@ -74,7 +74,7 @@ We leveraged the power of "bignumber.js" to simplify complex calculations involv
 
 ## UI
 
-![figma-work-flow](assets/screenshots/figma-work-flow.png)
+![figma-work-flow](src/assets/screenshots/figma-work-flow.png)
 
 The initial concept of the project was captured in the first picture, serving as the foundation for further development. However, recognizing the need for a more streamlined and cohesive structure, a simpler and more harmonious design approach was adopted. 
 
